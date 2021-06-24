@@ -1,6 +1,6 @@
 import React from "react";
 
-function Nav() {
+function NavBar() {
   const linkStyle = { border: "1px black", padding: "5px" };
 
   return (
@@ -18,7 +18,7 @@ function Nav() {
           <a href="#">Home</a>
         </div>
         <div style={linkStyle}>
-          <a href="#">About ME</a>
+          <a href="#">BIO</a>
         </div>
         <div style={linkStyle}>
           <a href="#">Portfolio</a>
@@ -34,4 +34,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default NavBar;
