@@ -1,7 +1,9 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function Portfolio() {
-    const portfolio = [
+    const projects = [
      {
         id: 1,
         image:"./img/NightSky-Working-Screenshot.jpg",
@@ -43,7 +45,56 @@ function Portfolio() {
         github:"https://github.com/DaneEnright/APIs-Work-Day-Scheduler",
     }   
     ];
+
+    const renderCard = (card) => {
+        return (
+            <Card className = "projectCard" key= {card.id}>
+                <Card.Img variant ="top" src= {card.image} />
+                <Card.Body>
+                    <Card.Title>{card.title}</Card.Title>
+                    <Card.Text>{card.description}</Card.Text>
+                    <Button variant = "primary">Github</Button>
+                    <Button variant = "primary">Deployed URL</Button>
+                </Card.Body>
+            </Card>
+        );
+    };
+
+    return <div className = "flex">{projects.map(renderCard)}</div>
    
 }
 
 export default Portfolio;
+
+// import React from 'react';
+
+// const ProfileList = ({ profiles, title }) => {
+//   if (!profiles.length) {
+//     return <h3>No Profiles Yet</h3>;
+//   }
+
+//   return (
+//     <div>
+//       <h3 className="text-primary">{title}</h3>
+//       <div className="flex-row justify-space-between my-4">
+//         {profiles &&
+//           profiles.map((profile) => (
+//             <div key={profile._id} className="col-12 col-xl-6">
+//               <div className="card mb-3">
+//                 <h4 className="card-header bg-dark text-light p-2 m-0">
+//                   {profile.name} <br />
+//                   <span className="text-white" style={{ fontSize: '1rem' }}>
+//                     currently has {profile.skills ? profile.skills.length : 0}{' '}
+//                     endorsed skill
+//                     {profile.skills && profile.skills.length === 1 ? '' : 's'}
+//                   </span>
+//                 </h4>
+//               </div>
+//             </div>
+//           ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProfileList;
