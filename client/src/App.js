@@ -1,6 +1,6 @@
 import React from "react";
 import NavTabs from "./components/NavTabs";
-import Bio from "./components/bio";
+import Bio from "./components/aboutMe";
 import Contact from "./components/contact";
 import Home from "./components/home";
 import Portfolio from "./components/portfolio";
