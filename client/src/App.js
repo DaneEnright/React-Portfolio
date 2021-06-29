@@ -13,6 +13,7 @@ function App() {
       <NavTabs />
       <Bio />
       <Portfolio />
+      <Footer />
     </div>
   )
 
