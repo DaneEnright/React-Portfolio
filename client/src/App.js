@@ -13,7 +13,9 @@ function App() {
       <NavTabs />
       <Bio />
       <Portfolio />
+      <Contact />
       <Footer />
+
     </div>
   )
 
